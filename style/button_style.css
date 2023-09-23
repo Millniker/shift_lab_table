@@ -1,0 +1,18 @@
+.button {
+    margin-left: 10px;
+    height: 38px;
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #6B8E23;
+    border: 1px solid #228B22;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 0 6px 0 #006400;
+    transition: all .1s;
+}
+
+.button:active {
+    box-shadow: 0 2px 0 #006400;
+    position: relative;
+    top: 2px;
+}

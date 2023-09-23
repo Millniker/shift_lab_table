@@ -1,0 +1,127 @@
+.resp-tab {
+    display: grid;
+    width: 1600px;
+    border-radius: 5px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    margin-top: 2%;
+}
+.tr{
+    display: flex;
+}
+
+.resp-tab .th, .resp-tab .td {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-family: 'Montserrat','Roboto', sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    vertical-align: top;
+    transition: color .7s ease-in-out, box-shadow .7s ease-in-out;
+    flex: 1;
+}
+
+.resp-tab .th {
+    color: #FFF;
+    background: #466F2B;
+    font-weight: bold;
+    border: 1px solid black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.resp-tab .td .column_name {
+    background: #466F2B;
+    color: #FFF;
+    display: none;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Montserrat','Roboto', sans-serif;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.td:hover {
+    box-shadow: inset 500px 0 0 0 #2E8B57;
+    color: white;
+}
+@media(max-width: 768px) {
+    .resp-tab .thead {
+        display: none;
+    }
+    .resp-tab .td{
+        word-break: normal;
+    }
+    .resp-tab .tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    .resp-tab .td {
+        margin: 0 -1px -1px 0;
+        padding-top: 35px;
+        position: relative;
+    }
+    .resp-tab .td .column_name {
+        display: block;
+    }
+}
+
+@media(max-width: 420px) {
+    .resp-tab .th,.resp-tab .td, .resp-tab .tr, .resp-tab {
+        display: grid;
+        justify-content: center;
+        width: auto;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+header{
+    margin-bottom: 2%;
+}
+main{
+    margin-bottom: 5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.waviy {
+    position: relative;
+}
+.waviy span{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 5s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+    0%,80% {
+        transform: rotateY(360deg)
+    }
+}
+.input_group{
+    display: grid;
+    margin-left: 10px;
+}
+.not_found{
+    margin-top: 5px;
+    display: none;
+}
+#result-count{
+    margin-top: 5px;
+    display: none;
+}
